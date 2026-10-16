@@ -77,3 +77,6 @@ if __name__ == "__main__":
     print(f"Left-hand side of equation (1): F[N-K] + F[N+K] = {fib_a[n-k]+fib_a[n+k]}")
     print(f"Right-hand side of equation (1): F[N] * L[K] = {fib_a[n] * luc_a[k]}")
     print("Equation (1) holds true!")
+    print("Error: Value too small" if n > 40 else f"fibonacci error at N={n}: {round(abs((fib_a[n]/fib_a[n-1])-ratio), k)}")
+    print(f"The natural logarithm of the Fibonacci number up to N={n}: {[-math.inf if i == 0 else round(math.log(i), 2) for i in fib_a[:-k]] }")
+
